@@ -1,0 +1,28 @@
+ Arquivo readme destinado para visualização dos codigos 
+
+### Maior volume de vendas
+SELECT marca, COUNT (marca) as qtd_vendido FROM fixxed_database_1 JOIN fixxed_database_2 ON fixxed_database_1.id_marca_ = fixxed_database_2.id_marca GROUP BY fixxed_database_2.marca ORDER BY qtd_vendido DESC  
+
+
+### Veiculos que gerou maior e menor receita
+
+SELECT nome, SUM (valor_do_veiculo*vendas) as valor_gerado FROM fixxed_database_1 GROUP BY nome ORDER BY valor_gerado DESC
+
+
+###Calculo de média - OBS: Não foi necessário pois so tem um ano de data.
+
+SELECT marca, SUM (vendas*valor_do_veiculo) as valor_marca, SUM (vendas) AS qtd_vendas,SUM (vendas*valor_do_veiculo)/SUM (vendas) AS media FROM fixxed_database_1 JOIN fixxed_database_2 ON fixxed_database_1.id_marca_ = fixxed_database_2.id_marca GROUP BY fixxed_database_2.marca order by media DESC   
+
+### Calculando marcas com maior receita e menos numeros de vendas
+
+SELECT marca, COUNT (marca) as qtd_vendido, SUM (valor_do_veiculo*vendas) as valor_gerado  FROM fixxed_database_1 JOIN fixxed_database_2 ON fixxed_database_1.id_marca_ = fixxed_database_2.id_marca GROUP BY fixxed_database_2.marca ORDER BY valor_gerado DESC 
+
+
+### Media de vendas anual
+
+SELECT fixxed_database_2.marca, AVG (fixxed_database_1.vendas) AS media_vendas FROM fixxed_database_1 JOIN fixxed_database_2 ON fixxed_database_1.id_marca_ = fixxed_database_2.id_marca GROUP BY marca;
+
+
+
+
+
