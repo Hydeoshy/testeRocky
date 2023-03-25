@@ -15,7 +15,7 @@ function fixedCharacters(database, key) { // Função responsável por fazer a m
 
 function convertSells(dataBase, key) { // Função responsável por converter o valor numeral de string para int
   Object.keys(dataBase).forEach(element => {
-    dataBase[element][key] = parseInt(dataBase[element][key]);
+    dataBase[element][key] = parseInt(dataBase[element][key])
   })
 
   return dataBase;

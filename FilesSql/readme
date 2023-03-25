@@ -1,4 +1,4 @@
- Arquivo readme destinado para visualização dos codigos 
+ Arquivo readme destinado para visualização dos codigos Sql
 
 ### Maior volume de vendas
 SELECT marca, COUNT (marca) as qtd_vendido FROM fixxed_database_1 JOIN fixxed_database_2 ON fixxed_database_1.id_marca_ = fixxed_database_2.id_marca GROUP BY fixxed_database_2.marca ORDER BY qtd_vendido DESC  
